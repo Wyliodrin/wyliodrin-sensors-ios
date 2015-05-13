@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvh-u4-8s9">
+                                <rect key="frame" x="484" y="28" width="78" height="30"/>
+                                <color key="backgroundColor" red="0.86870601540000003" green="0.2468149124" blue="0.12462158249999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Token">
+                                    <color key="titleColor" red="0.97332797199999999" green="0.98525469170000002" blue="0.95041125959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnViewQRClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hz1-3T-iB4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9a-C5-HJB">
+                                <rect key="frame" x="0.0" y="397" width="573" height="83"/>
+                                <color key="backgroundColor" red="0.86870601541554959" green="0.24681491241917258" blue="0.1246215824505512" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Scan token">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="7" y="287" width="573" height="83"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="7" y="448" width="375" height="57"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="eaR-Rq-yW6" kind="show" id="itz-FH-RzZ"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="22" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nwd-xU-sqn">
+                                <rect key="frame" x="7" y="101" width="566" height="296"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="7" y="101" width="566" height="178"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="10" y="97" width="156" height="254"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="39" y="129" width="223" height="322"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="vUc-7J-Yg8"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vZ1-PV-fuU"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wyliodrin-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="qwc-5x-lvm">
+                                <rect key="frame" x="16" y="8" width="165" height="80"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h9a-C5-HJB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="2Eu-Qu-8zX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gvh-u4-8s9" secondAttribute="trailing" constant="22" id="CxX-9g-vwH"/>
+                            <constraint firstItem="nwd-xU-sqn" firstAttribute="width" secondItem="h9a-C5-HJB" secondAttribute="width" id="DY1-b5-D8E"/>
+                            <constraint firstItem="h9a-C5-HJB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="JNm-sM-XiI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="viewQR" destination="gvh-u4-8s9" id="T3L-bo-SsN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1213" y="286"/>
+        </scene>
+        <!--Scan View Controller-->
+        <scene sceneID="gCG-Fo-e8w">
+            <objects>
+                <viewController id="eaR-Rq-yW6" customClass="ScanViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aRL-yV-oeG"/>
+                        <viewControllerLayoutGuide type="bottom" id="3HA-pI-yuf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ahy-AV-DKL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLK-kO-Way">
+                                <rect key="frame" x="38" y="20" width="46" height="30"/>
+                                <state key="normal" backgroundImage="back-button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="6bo-xW-Nfi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DQ6-vf-Cac" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="624" y="1029"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back-button.png" width="370" height="361"/>
+        <image name="wyliodrin-logo.png" width="604" height="199"/>
+    </resources>
+</document>
